@@ -4,8 +4,8 @@ import 'package:ctrlgo/core/location/geo_position.dart';
 import 'package:ctrlgo/core/location/position_source.dart';
 import 'package:ctrlgo/core/time/clock.dart';
 
-/// Replays a track with its original timing: the web demo's drive, or a
-/// recorded fixture in tests (the "recorded" source is this class fed
+/// Replays a track with its original timing, e.g. the recorded demo drive in
+/// `test_fixtures/` (the "recorded" source is this class fed
 /// with a recorded track).
 class SimulatedPositionSource implements PositionSource {
   /// `speed` > 1 replays faster. Emitted fixes are stamped with `clock`'s

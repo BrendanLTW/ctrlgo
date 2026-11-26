@@ -1,6 +1,6 @@
 # ctrlGo (`ctrlgo`)
 
-Navigation and temporary location-sharing app in Flutter (Android, iOS, plus a web demo with simulated GPS). Fourth app in the ctrlWorks family after ctrlSpend and ctrlTask. Portfolio project: architecture, tests and a live demo matter as much as features.
+Navigation and temporary location-sharing app in Flutter for Android and iOS (no web build). Fourth app in the ctrlWorks family after ctrlSpend and ctrlTask. Portfolio project: architecture, tests and a downloadable APK matter as much as features.
 
 ## Read first
 - `docs/PRD.md`: requirements FR-01–FR-29, user stories, data model, technical approach (§9). **The source of truth for behaviour.**

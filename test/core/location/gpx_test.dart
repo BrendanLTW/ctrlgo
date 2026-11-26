@@ -23,7 +23,7 @@ void main() {
 
   test('the demo drive runs Bangsar South to KLCC in time order', () {
     final points = parseGpx(
-      File('assets/demo/bangsar_south_klcc.gpx').readAsStringSync(),
+      File('test_fixtures/bangsar_south_klcc.gpx').readAsStringSync(),
     );
 
     expect(points.length, greaterThanOrEqualTo(10));

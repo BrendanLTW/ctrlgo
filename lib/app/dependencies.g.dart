@@ -49,17 +49,12 @@ final class ClockProvider extends $FunctionalProvider<Clock, Clock, Clock>
 
 String _$clockHash() => r'55214d6539f7396a3ae1aa23b06eea79fdac0ebe';
 
-/// The web demo has no GPS worth using, so it replays the demo drive.
-
 @ProviderFor(positionSource)
 final positionSourceProvider = PositionSourceProvider._();
-
-/// The web demo has no GPS worth using, so it replays the demo drive.
 
 final class PositionSourceProvider
     extends $FunctionalProvider<PositionSource, PositionSource, PositionSource>
     with $Provider<PositionSource> {
-  /// The web demo has no GPS worth using, so it replays the demo drive.
   PositionSourceProvider._()
     : super(
         from: null,
@@ -93,7 +88,7 @@ final class PositionSourceProvider
   }
 }
 
-String _$positionSourceHash() => r'8557e4836597d96c047b7e7f392229b35955afd0';
+String _$positionSourceHash() => r'b8e0c780aa07dcbc8e592cb05742a176cb9dc076';
 
 @ProviderFor(connectivity)
 final connectivityProvider = ConnectivityProvider._();

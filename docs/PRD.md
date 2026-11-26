@@ -31,7 +31,7 @@ Like ctrlSpend, it is a Flutter portfolio project, so architecture, tests and a 
 - Feature-first Flutter architecture with enforced layer boundaries, reused from ctrlSpend.
 - A real backend with security rules that are tested, not just written.
 - Location, background and real-time code that is testable through injected clocks, position streams and fakes.
-- CI on every push, a web demo with simulated GPS, and an Android APK.
+- CI on every push and a downloadable Android APK.
 
 **Non-goals for v1**
 
@@ -51,7 +51,7 @@ Like ctrlSpend, it is a Flutter portfolio project, so architecture, tests and a 
 | Hafiz, 30, delivery rider on the side | Motorcycle around the city | Motorcycle-friendly routes, police and pothole reports, petrol stops | Car routes that send bikes onto expressways |
 | Priya, 35, parent | Coordinates family trips and school runs | Group trips, arrival alerts, emergency shortcuts | Calling everyone to ask "where are you now?" |
 
-**Secondary audience:** recruiters and engineers reviewing the portfolio. They'll open the web demo (simulated GPS, seeded friends) and read the README and a few source files.
+**Secondary audience:** recruiters and engineers reviewing the portfolio. They'll install the APK and read the README and a few source files.
 
 ## 4. User stories and acceptance criteria
 
@@ -215,7 +215,7 @@ FR-26 is P2 as a dedicated experience, but basic stale-data labels ("updated 12 
 | Offline | Saved places, recents and the active route survive loss of connection; live data always shows its age |
 | Accessibility | Semantic labels on all icon-only controls and map markers; WCAG AA contrast in both themes; layouts hold at 200% text scale; colour never the only signal |
 | Localisation | All strings in ARB files; English at launch, Bahasa Melayu in P2; distance in km/m by default |
-| Platforms | Android and iOS primary; a web build for the portfolio demo with simulated GPS and seeded friends (background location, voice and notifications hidden on web) |
+| Platforms | Android and iOS only; no web build |
 | Quality | `flutter analyze` clean with strict lints; unit tests for every repository, calculation and state machine; widget tests for every screen; integration tests for the core flows; CI on every push |
 
 ## 7. Data model
@@ -276,13 +276,13 @@ ctrlGo reuses ctrlSpend's feature-first structure and conventions (`CLAUDE.md`).
 | Local storage | Drift (SQLite) for saved places, collections, recents, offline area metadata; shared_preferences for settings | Same as ctrlSpend; works offline |
 | Voice | `flutter_tts` | On-device speech for guidance |
 | Testing | flutter_test, mocktail, integration_test, Firebase emulator suite, fake position streams and clock | Navigation and sharing logic is deterministic in tests |
-| CI/CD | GitHub Actions | Analyze, test and rules tests on push; web demo to GitHub Pages; APK on release |
+| CI/CD | GitHub Actions | Analyze, test and rules tests on push; APK on release |
 
 **Layer rules:** presentation talks only to repository interfaces through providers. The domain layer is pure Dart, with no Flutter, Firebase or Google SDK imports. Route progress, off-route detection, ETA, report expiry, share expiry and group status are pure functions with an injected clock, so they can be unit-tested without a device.
 
 **Cloud Functions:** expire shares and groups, compute report confidence and expiry, send arrival and group notifications, and enforce blocking on the server.
 
-**Cost control:** Places autocomplete uses session tokens; route requests are debounced and cached per origin, destination and mode for 60 s; the web demo uses recorded fixtures instead of live API calls.
+**Cost control:** Places autocomplete uses session tokens; route requests are debounced and cached per origin, destination and mode for 60 s; tests use recorded fixtures instead of live API calls.
 
 ## 10. Success metrics
 
@@ -297,7 +297,6 @@ As with ctrlSpend, there's no third-party analytics. Success is measured through
 | Battery cost of sharing | ≤ 3% an hour in Balanced mode | 2-hour test on a reference device |
 | Test coverage | ≥ 80% of domain and data layers; every security rule has an allow and a deny test | Coverage report and emulator tests in CI |
 | Build health | Green CI on main; zero analyzer warnings | GitHub Actions badge |
-| Demo reach | Web demo with simulated drive opens in under 3 s on desktop | Lighthouse on the GitHub Pages build |
 
 ## 11. Milestones and release plan
 
@@ -305,12 +304,12 @@ About ten part-time weeks to v1.0 (P0 + P1). Each phase maps to a section of [`d
 
 | Phase | Scope | Weeks | Gate |
 |---|---|---|---|
-| 0 | Setup: repo, CI, theme tokens, API keys, Firebase emulator, web demo spike | 1 | CI green; themed empty app on web and Android |
+| 0 | Setup: repo, CI, theme tokens, API keys, Firebase emulator | 1 | CI green; themed empty app on Android |
 | 1 | Map, search, saved places, car and walking routes | 2 | — |
 | 2 | Navigation: turn-by-turn, voice, lanes, speed, rerouting | 2 | **MVP gate:** drive test passes |
 | 3 | Accounts, friends, live sharing, privacy | 2 | Security rules fully tested |
 | 4 | Transit, motorcycle, preferences, along-route, multi-stop, places | 2 | — |
-| 5 | Road reports, emergency, driving lock, polish | 1 | **v1.0 gate:** all P0 and P1 green; demo deployed |
+| 5 | Road reports, emergency, driving lock, polish | 1 | **v1.0 gate:** all P0 and P1 green; APK published |
 | 6 | Stretch: Go Together, offline areas, GPS loss, collections, battery modes, Bahasa Melayu | open | Pick at least two |
 
 If time runs short, cut Phase 6 entirely; v1.0 is complete without it.
@@ -321,7 +320,7 @@ The biggest risks are API cost and the complexity of background location, not th
 
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Google Maps Platform costs from search and routes during testing | Unexpected bill | Budget alerts and quotas; session tokens; caching; fixtures for the web demo and tests |
+| Google Maps Platform costs from search and routes during testing | Unexpected bill | Budget alerts and quotas; session tokens; caching; fixtures for tests |
 | Background location restrictions (Android 14+, iOS) | Sharing stops when the app is closed | Foreground service with a visible notification; "Always" permission explained in-app; graceful "last seen" fallback |
 | Privacy bugs in sharing rules | Someone sees a location they shouldn't | Rules tested in the emulator in CI; server-side expiry; blocking enforced in rules and functions |
 | Report spam or false reports | Untrustworthy map | Rate limit per user; confidence from confirmations; short default expiry |
@@ -337,4 +336,4 @@ The biggest risks are API cost and the complexity of background location, not th
 - [ ] Keep Google Maps for display and accept no offline areas, or move to Mapbox or MapLibre?
 - [ ] Is phone sign-in worth the SMS cost, or is Google and Apple sign-in enough?
 - [ ] Which two Phase 6 features will you build?
-- [ ] Play Store release, or APK plus web demo only?
+- [ ] Play Store release, or APK only?

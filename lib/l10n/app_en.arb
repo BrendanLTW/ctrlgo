@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "tabExplore": "Explore",
+  "tabFriends": "Friends",
+  "tabSaved": "Saved",
+  "tabProfile": "Profile",
+  "mainNavigation": "Main",
+  "getDirections": "Get directions",
+  "shareMyLocation": "Share my location",
+  "addSavedPlace": "Add a saved place"
+}

@@ -1,19 +1,7 @@
-import 'package:ctrlgo/core/theme/ct_theme.dart';
+import 'package:ctrlgo/app/app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const new({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: buildLightTheme(),
-      darkTheme: buildDarkTheme(),
-      home: const Scaffold(body: Center(child: Text('ctrlGo'))),
-    );
-  }
+  runApp(const ProviderScope(child: CtrlGoApp()));
 }

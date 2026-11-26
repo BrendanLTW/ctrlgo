@@ -31,4 +31,16 @@ abstract final class CtSize {
   static const double tileLg = 48;
   static const double tileMd = 40;
   static const double tileSm = 28;
+
+  // Nav bar and FAB, from the canvas `.nav` and `.fab` rules.
+  static const double navBottom = 24;
+  static const double navWidth = 278;
+  static const double navHeight = 68;
+  static const double navPadX = 8;
+  static const double navGap = 2;
+  static const double navItemHeight = 52;
+  static const double navItemPadX = 14;
+  static const double navItemGap = 8;
+  static const double fab = 64;
+  static const double fabIcon = 28;
 }

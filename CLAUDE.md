@@ -98,7 +98,7 @@ A task is done only when:
 2. All checks above are green, with new tests for the new behaviour.
 3. Codegen is up to date.
 4. The task is ticked in `docs/PLAN.md`.
-5. It's committed as a single commit naming the task ID, e.g. `0.3 Theme tokens`.
+5. It's committed as a single Conventional Commit, e.g. `feat: theme tokens` (lowercase). Prefixes: `feat:`, `fix:`, `test:`, `refactor:`, `chore:` (setup, deps, CI), `docs:`.
 
 ## Working style
 - One task per commit. Don't start the next task unprompted.

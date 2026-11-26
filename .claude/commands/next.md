@@ -23,6 +23,6 @@ Do the next task from `docs/PLAN.md`, following `CLAUDE.md`.
    - How the "Done when" was verified (commands and results)
    - Non-obvious code explained: why it's done that way, as I'd explain it in an interview
    - Anything I should know: shortcuts, risks, decisions, doc conflicts
-   - The proposed commit message: `<task ID> <short title>`, e.g. `0.3 Theme tokens`
+   - The proposed commit message: `<prefix>: <short title>`, e.g. `feat: theme tokens` (prefixes in `CLAUDE.md`)
 
 7. **Stop.** Don't commit until I approve, and don't start the next task.

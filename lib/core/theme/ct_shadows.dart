@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// Read it with `context.shadows`.
 @immutable
 class CtShadows extends ThemeExtension<CtShadows> {
-  const new({required this.floating});
+  const new({required this.floating, required this.fab});
 
   static const light = CtShadows(
     floating: [
@@ -13,6 +13,13 @@ class CtShadows extends ThemeExtension<CtShadows> {
         offset: Offset(0, 8),
         blurRadius: 28,
         color: Color.fromRGBO(16, 24, 40, 0.08),
+      ),
+    ],
+    fab: [
+      BoxShadow(
+        offset: Offset(0, 10),
+        blurRadius: 24,
+        color: Color.fromRGBO(16, 24, 40, 0.28),
       ),
     ],
   );
@@ -25,9 +32,19 @@ class CtShadows extends ThemeExtension<CtShadows> {
         color: Color.fromRGBO(0, 0, 0, 0.5),
       ),
     ],
+    fab: [
+      BoxShadow(
+        offset: Offset(0, 10),
+        blurRadius: 24,
+        color: Color.fromRGBO(0, 0, 0, 0.5),
+      ),
+    ],
   );
 
   final List<BoxShadow> floating;
+
+  /// Stronger shadow under the ink FAB (from the canvas `.fab` rule).
+  final List<BoxShadow> fab;
 
   // Tokens are fixed per theme; nothing overrides them.
   @override
@@ -38,6 +55,7 @@ class CtShadows extends ThemeExtension<CtShadows> {
     if (other == null) return this;
     return CtShadows(
       floating: BoxShadow.lerpList(floating, other.floating, t)!,
+      fab: BoxShadow.lerpList(fab, other.fab, t)!,
     );
   }
 }

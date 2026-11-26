@@ -58,7 +58,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Done when: `build_runner` succeeds and the lockfile is committed.
 - [x] **0.3 Theme tokens** in `core/theme/`: `CtColors` (family core), `GoColors` extension (go, goSoft, altRoute, map colours), `CtTones` (8 tones × tile, fg, chart), `CtRadius`, `CtSpacing`, Poppins with tabular figures. Light and dark `ThemeData`. Values from DESIGN.md §2.
   Done when: a golden test renders a token swatch page in both themes.
-- [ ] **0.4 App shell**: go_router `StatefulShellRoute` with Explore, Friends, Saved and Profile; `CtNavBar` floating pill plus contextual `CtFab`.
+- [x] **0.4 App shell**: go_router `StatefulShellRoute` with Explore, Friends, Saved and Profile; `CtNavBar` floating pill plus contextual `CtFab`.
   Done when: a widget test switches tabs, each tab keeps its scroll position, and the FAB changes per tab.
 - [ ] **0.5 Map styles**: `assets/map/light.json` and `dark.json` matching DESIGN.md §2.3; map switches style with the theme.
   Done when: toggling the theme on the demo screen changes the map style.

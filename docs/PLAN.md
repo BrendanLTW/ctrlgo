@@ -16,6 +16,7 @@ Companion to [`docs/PRD.md`](PRD.md) and [`docs/DESIGN.md`](DESIGN.md). Code con
 dart format --set-exit-if-changed .
 flutter analyze
 flutter test
+tool/check_secrets.sh
 firebase emulators:exec --only firestore,functions "npm --prefix functions test"   # from Phase 3
 ```
 
@@ -67,7 +68,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Note: `tool/check_secrets.sh` is the grep check; 0.8 adds it to CI. Creating the keys, restrictions and budget in Google Cloud is a manual step (README › Setup).
 - [x] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. Tests use `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive (`test_fixtures/`).
   Done when: a unit test drives a fake position stream through 10 points.
-- [ ] **0.8 CI**: GitHub Actions running format, analyze and test on push.
+- [x] **0.8 CI**: GitHub Actions running format, analyze and test on push.
   Done when: the badge is green.
   Note: web build and web demo dropped (2026-11-26); goldens run locally only.
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="ctrlGo" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Bangsar South to KLCC (approximate)</name>
+    <desc>Hand-placed placeholder, one point a minute along Kerinchi, KL Sentral and Jalan Sultan Ismail. Not snapped to roads. Replace with a recorded drive or a Routes API polyline.</desc>
+  </metadata>
+  <trk>
+    <name>Bangsar South to KLCC</name>
+    <trkseg>
+      <trkpt lat="3.1105" lon="101.6660"><time>2026-11-26T09:41:00Z</time></trkpt>
+      <trkpt lat="3.1140" lon="101.6655"><time>2026-11-26T09:42:00Z</time></trkpt>
+      <trkpt lat="3.1172" lon="101.6670"><time>2026-11-26T09:43:00Z</time></trkpt>
+      <trkpt lat="3.1200" lon="101.6720"><time>2026-11-26T09:44:00Z</time></trkpt>
+      <trkpt lat="3.1235" lon="101.6770"><time>2026-11-26T09:45:00Z</time></trkpt>
+      <trkpt lat="3.1270" lon="101.6810"><time>2026-11-26T09:46:00Z</time></trkpt>
+      <trkpt lat="3.1305" lon="101.6845"><time>2026-11-26T09:47:00Z</time></trkpt>
+      <trkpt lat="3.1335" lon="101.6870"><time>2026-11-26T09:48:00Z</time></trkpt>
+      <trkpt lat="3.1365" lon="101.6890"><time>2026-11-26T09:49:00Z</time></trkpt>
+      <trkpt lat="3.1400" lon="101.6930"><time>2026-11-26T09:50:00Z</time></trkpt>
+      <trkpt lat="3.1440" lon="101.6965"><time>2026-11-26T09:51:00Z</time></trkpt>
+      <trkpt lat="3.1475" lon="101.6990"><time>2026-11-26T09:52:00Z</time></trkpt>
+      <trkpt lat="3.1505" lon="101.7020"><time>2026-11-26T09:53:00Z</time></trkpt>
+      <trkpt lat="3.1530" lon="101.7050"><time>2026-11-26T09:54:00Z</time></trkpt>
+      <trkpt lat="3.1550" lon="101.7075"><time>2026-11-26T09:55:00Z</time></trkpt>
+      <trkpt lat="3.1565" lon="101.7095"><time>2026-11-26T09:56:00Z</time></trkpt>
+      <trkpt lat="3.1580" lon="101.7115"><time>2026-11-26T09:57:00Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

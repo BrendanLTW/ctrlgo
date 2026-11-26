@@ -65,7 +65,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
 - [x] **0.6 Environment and keys**: `--dart-define` for API keys; keys restricted by package, SHA-1 and web referrer; budget alerts on the Maps project.
   Done when: no key is in git (CI grep check), and the README documents the setup.
   Note: `tool/check_secrets.sh` is the grep check; 0.8 adds it to CI. Creating the keys, restrictions and budget in Google Cloud is a manual step (README › Setup).
-- [ ] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. The web demo uses `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive.
+- [x] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. The web demo uses `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive.
   Done when: a unit test drives a fake position stream through 10 points.
 - [ ] **0.8 CI**: GitHub Actions running format, analyze and test on push; web build deployed to GitHub Pages on main.
   Done when: the badge is green and the demo URL loads the themed shell.

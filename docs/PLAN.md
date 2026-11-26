@@ -56,7 +56,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Note: running on a device was skipped by choice (no Chrome or Android device on the dev machine); `flutter build apk --debug` and `flutter build web` succeed instead.
 - [x] **0.2 Add core dependencies**: riverpod (+ generator), go_router, freezed, json_serializable, drift, shared_preferences, intl, google_maps_flutter, geolocator, flutter_tts, firebase_core, mocktail.
   Done when: `build_runner` succeeds and the lockfile is committed.
-- [ ] **0.3 Theme tokens** in `core/theme/`: `CtColors` (family core), `GoColors` extension (go, goSoft, altRoute, map colours), `CtTones` (8 tones × tile, fg, chart), `CtRadius`, `CtSpacing`, Poppins with tabular figures. Light and dark `ThemeData`. Values from DESIGN.md §2.
+- [x] **0.3 Theme tokens** in `core/theme/`: `CtColors` (family core), `GoColors` extension (go, goSoft, altRoute, map colours), `CtTones` (8 tones × tile, fg, chart), `CtRadius`, `CtSpacing`, Poppins with tabular figures. Light and dark `ThemeData`. Values from DESIGN.md §2.
   Done when: a golden test renders a token swatch page in both themes.
 - [ ] **0.4 App shell**: go_router `StatefulShellRoute` with Explore, Friends, Saved and Profile; `CtNavBar` floating pill plus contextual `CtFab`.
   Done when: a widget test switches tabs, each tab keeps its scroll position, and the FAB changes per tab.

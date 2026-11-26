@@ -60,7 +60,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Done when: a golden test renders a token swatch page in both themes.
 - [x] **0.4 App shell**: go_router `StatefulShellRoute` with Explore, Friends, Saved and Profile; `CtNavBar` floating pill plus contextual `CtFab`.
   Done when: a widget test switches tabs, each tab keeps its scroll position, and the FAB changes per tab.
-- [ ] **0.5 Map styles**: `assets/map/light.json` and `dark.json` matching DESIGN.md §2.3; map switches style with the theme.
+- [x] **0.5 Map styles**: `assets/map/light.json` and `dark.json` matching DESIGN.md §2.3; map switches style with the theme.
   Done when: toggling the theme on the demo screen changes the map style.
 - [ ] **0.6 Environment and keys**: `--dart-define` for API keys; keys restricted by package, SHA-1 and web referrer; budget alerts on the Maps project.
   Done when: no key is in git (CI grep check), and the README documents the setup.

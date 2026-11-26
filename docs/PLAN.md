@@ -65,10 +65,11 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
 - [x] **0.6 Environment and keys**: `--dart-define` for API keys; keys restricted by package, SHA-1 and web referrer; budget alerts on the Maps project.
   Done when: no key is in git (CI grep check), and the README documents the setup.
   Note: `tool/check_secrets.sh` is the grep check; 0.8 adds it to CI. Creating the keys, restrictions and budget in Google Cloud is a manual step (README › Setup).
-- [x] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. The web demo uses `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive.
+- [x] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. Tests use `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive (`test_fixtures/`).
   Done when: a unit test drives a fake position stream through 10 points.
-- [ ] **0.8 CI**: GitHub Actions running format, analyze and test on push; web build deployed to GitHub Pages on main.
-  Done when: the badge is green and the demo URL loads the themed shell.
+- [ ] **0.8 CI**: GitHub Actions running format, analyze and test on push.
+  Done when: the badge is green.
+  Note: web build and web demo dropped (2026-11-26); goldens run locally only.
 
 ## Phase 1 — Map, search, saved, routes (weeks 2–3)
 
@@ -87,7 +88,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
 - [ ] **1.7 Route selection screen**: header with from/to and swap; ETA bubbles; selected route on top; `RouteOptionCard` list; mode selector; Start and Share ETA.
   Done when: tapping a bubble or card selects the route (widget test), and the `RoutesLoading` and `NoRoute` states render from a fake repository.
 - [ ] **1.8 Integration test**: search "klcc" → pick Suria KLCC → routes shown → select the second route.
-  Done when: it passes in CI on the web target with fixtures.
+  Done when: it passes on an Android emulator with fixtures.
 
 ## Phase 2 — Navigation (weeks 4–5)
 
@@ -156,9 +157,9 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Done when: a unit test with a speed stream covers hysteresis (lock at 10, unlock below 5 for 10 s).
 - [ ] **5.5 Accessibility pass**: semantics on map markers and icon buttons, 200% text scale, contrast check in both themes.
   Done when: `meetsGuideline` checks pass in widget tests for every screen.
-- [ ] **5.6 README and demo**: GIF of the simulated drive, architecture diagram, decision notes (Google vs Mapbox, Firestore rules, guidance engine).
-  Done when: a reviewer can run the demo in one click.
-- [ ] **Gate — v1.0:** every P0 and P1 FR is ticked, CI is green, the web demo and APK are published.
+- [ ] **5.6 README and APK**: GIF of a recorded drive, architecture diagram, decision notes (Google vs Mapbox, Firestore rules, guidance engine).
+  Done when: a reviewer can install the APK from the latest GitHub release.
+- [ ] **Gate — v1.0:** every P0 and P1 FR is ticked, CI is green, the APK is published.
 
 ## Phase 6 — Stretch (pick at least two)
 

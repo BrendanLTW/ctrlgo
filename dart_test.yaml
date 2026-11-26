@@ -1,0 +1,4 @@
+tags:
+  # Pixel comparisons recorded on macOS. CI (Linux) skips them; run them
+  # locally with: flutter test --tags golden
+  golden: {}

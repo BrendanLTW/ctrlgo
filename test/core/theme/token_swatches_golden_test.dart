@@ -1,3 +1,6 @@
+@Tags(['golden'])
+library;
+
 import 'package:ctrlgo/core/theme/ct_colors.dart';
 import 'package:ctrlgo/core/theme/ct_radius.dart';
 import 'package:ctrlgo/core/theme/ct_spacing.dart';

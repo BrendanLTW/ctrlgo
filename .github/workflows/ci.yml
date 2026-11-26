@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.9
+          cache: true
+      - run: flutter pub get
+      - name: Codegen is up to date
+        run: |
+          dart run build_runner build --delete-conflicting-outputs
+          flutter gen-l10n
+          git diff --exit-code
+      - run: dart format --set-exit-if-changed .
+      - run: flutter analyze
+      # Goldens were recorded on macOS and Linux renders fonts slightly
+      # differently, so they run locally only: flutter test --tags golden
+      - run: flutter test --exclude-tags golden
+      - run: tool/check_secrets.sh

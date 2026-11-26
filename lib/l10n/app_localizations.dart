@@ -141,6 +141,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add a saved place'**
   String get addSavedPlace;
+
+  /// No description provided for @locationAskTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'See where you are'**
+  String get locationAskTitle;
+
+  /// No description provided for @locationAskBody.
+  ///
+  /// In en, this message translates to:
+  /// **'ctrlGo uses your location to show where you are and give turn-by-turn directions. It is only shared with friends when you choose.'**
+  String get locationAskBody;
+
+  /// No description provided for @locationAskContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get locationAskContinue;
+
+  /// No description provided for @locationOffTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location is turned off'**
+  String get locationOffTitle;
+
+  /// No description provided for @locationOffBody.
+  ///
+  /// In en, this message translates to:
+  /// **'ctrlGo needs your location to show where you are and give turn-by-turn directions. It is only shared with friends when you choose.'**
+  String get locationOffBody;
+
+  /// No description provided for @locationSettingsPathAndroid.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings › Apps › ctrlGo › Permissions › Location › '**
+  String get locationSettingsPathAndroid;
+
+  /// No description provided for @locationSettingsValueAndroid.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow only while using the app'**
+  String get locationSettingsValueAndroid;
+
+  /// No description provided for @locationSettingsPathIos.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings › ctrlGo › Location › '**
+  String get locationSettingsPathIos;
+
+  /// No description provided for @locationSettingsValueIos.
+  ///
+  /// In en, this message translates to:
+  /// **'While Using the App'**
+  String get locationSettingsValueIos;
+
+  /// No description provided for @openSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Settings'**
+  String get openSettings;
+
+  /// No description provided for @searchWithoutLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Search without location'**
+  String get searchWithoutLocation;
 }
 
 class _AppLocalizationsDelegate

@@ -8,9 +8,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 /// [CtIconView] sets the stroke each place needs.
 enum CtIcon {
   add('add'),
+  crosshair('crosshair'),
   explore('explore'),
   friends('friends'),
   go('go'),
+  location('location'),
+  locationOff('location_off'),
   profile('profile'),
   saved('saved'),
   share('share');
@@ -25,6 +28,12 @@ enum CtIcon {
 /// Stroke widths from the canvas.
 abstract final class CtIconStroke {
   static const double nav = 1.7;
+
+  /// The big circle on state sheets (canvas `.eb`).
+  static const double state = 1.7;
+
+  /// Icon tiles (canvas `.ic`).
+  static const double tile = 1.9;
   static const double button = 1.8;
   static const double fab = 2.2;
 

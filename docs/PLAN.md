@@ -74,7 +74,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
 
 ## Phase 1 — Map, search, saved, routes (weeks 2–3)
 
-- [ ] **1.1 Location permission flow** (FR-10): explainer → system prompt → states for Always, While using and Denied; the `LocDenied` screen.
+- [x] **1.1 Location permission flow** (FR-10): explainer → system prompt → states for Always, While using and Denied; the `LocDenied` screen.
   Done when: widget tests cover all three states and "Open Settings" deep-links on Android.
 - [ ] **1.2 Explore map** (FR-01): full-screen map, `LocationPuck` with heading cone, recentre button, layers button, floating search, quick-destination chips.
   Done when: the puck follows the simulated position and recentre animates back to it.

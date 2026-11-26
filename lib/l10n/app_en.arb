@@ -7,5 +7,16 @@
   "mainNavigation": "Main",
   "getDirections": "Get directions",
   "shareMyLocation": "Share my location",
-  "addSavedPlace": "Add a saved place"
+  "addSavedPlace": "Add a saved place",
+  "locationAskTitle": "See where you are",
+  "locationAskBody": "ctrlGo uses your location to show where you are and give turn-by-turn directions. It is only shared with friends when you choose.",
+  "locationAskContinue": "Continue",
+  "locationOffTitle": "Location is turned off",
+  "locationOffBody": "ctrlGo needs your location to show where you are and give turn-by-turn directions. It is only shared with friends when you choose.",
+  "locationSettingsPathAndroid": "Settings › Apps › ctrlGo › Permissions › Location › ",
+  "locationSettingsValueAndroid": "Allow only while using the app",
+  "locationSettingsPathIos": "Settings › ctrlGo › Location › ",
+  "locationSettingsValueIos": "While Using the App",
+  "openSettings": "Open Settings",
+  "searchWithoutLocation": "Search without location"
 }

@@ -4,6 +4,8 @@
 <dict>
 	<key>DartDefines</key>
 	<string>$(DART_DEFINES)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ctrlGo uses your location to show where you are and give turn-by-turn directions. It is only shared with friends when you choose.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

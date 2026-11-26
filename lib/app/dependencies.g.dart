@@ -130,3 +130,104 @@ final class ConnectivityProvider
 }
 
 String _$connectivityHash() => r'ca5d398526794e812950290a753edca1fe48fe72';
+
+/// Loaded once in `main` before the app starts, so reads are synchronous.
+
+@ProviderFor(sharedPreferences)
+final sharedPreferencesProvider = SharedPreferencesProvider._();
+
+/// Loaded once in `main` before the app starts, so reads are synchronous.
+
+final class SharedPreferencesProvider
+    extends
+        $FunctionalProvider<
+          SharedPreferences,
+          SharedPreferences,
+          SharedPreferences
+        >
+    with $Provider<SharedPreferences> {
+  /// Loaded once in `main` before the app starts, so reads are synchronous.
+  SharedPreferencesProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sharedPreferencesProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$sharedPreferencesHash();
+
+  @$internal
+  @override
+  $ProviderElement<SharedPreferences> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  SharedPreferences create(Ref ref) {
+    return sharedPreferences(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(SharedPreferences value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<SharedPreferences>(value),
+    );
+  }
+}
+
+String _$sharedPreferencesHash() => r'3223738ee8fa1d361c6e2f5b192a32337fc54b24';
+
+@ProviderFor(locationPermissionRepository)
+final locationPermissionRepositoryProvider =
+    LocationPermissionRepositoryProvider._();
+
+final class LocationPermissionRepositoryProvider
+    extends
+        $FunctionalProvider<
+          LocationPermissionRepository,
+          LocationPermissionRepository,
+          LocationPermissionRepository
+        >
+    with $Provider<LocationPermissionRepository> {
+  LocationPermissionRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'locationPermissionRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$locationPermissionRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<LocationPermissionRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  LocationPermissionRepository create(Ref ref) {
+    return locationPermissionRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(LocationPermissionRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<LocationPermissionRepository>(value),
+    );
+  }
+}
+
+String _$locationPermissionRepositoryHash() =>
+    r'41636b45e5fb98d871e7128954785d8e0eb68877';

@@ -42,5 +42,14 @@ abstract final class CtSize {
   static const double navItemPadX = 14;
   static const double navItemGap = 8;
   static const double fab = 64;
+
+  // Buttons and state sheets, from the canvas `.btn`, `.link` and `.eb`.
+  static const double button = 58;
+  static const double textButton = 48;
+  static const double stateIcon = 96;
+  static const double stateGlyph = 40;
+
+  /// List rows inside sheets (`.gi` at 52).
+  static const double rowCompact = 52;
   static const double fabIcon = 28;
 }

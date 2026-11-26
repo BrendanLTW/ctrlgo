@@ -94,6 +94,14 @@ abstract final class CtText {
     fontFeatures: _tabular,
   );
 
+  /// Primary buttons (canvas `.btn`; not in DESIGN §2.5).
+  static const button = TextStyle(
+    fontFamily: _family,
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    fontFeatures: _tabular,
+  );
+
   /// Mode labels, leg chips, ETA bubbles (DESIGN gives 11–12).
   static const small = TextStyle(
     fontFamily: _family,

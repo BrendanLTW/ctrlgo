@@ -69,7 +69,7 @@ Layer rules:
 - No text input above 10 km/h unless the user confirms they're a passenger.
 
 **Secrets**
-- API keys are passed only with `--dart-define` (or `--dart-define-from-file` with a git-ignored file). Never commit a key, a `google-services.json` with live keys, or a `.env`.
+- API keys live only in the git-ignored `env.json`, passed with `--dart-define-from-file=env.json` and read through `Env`. Never commit a key, a `google-services.json` with live keys, or a `.env`.
 
 ## Commands
 Checks, run for every task:
@@ -78,6 +78,7 @@ Checks, run for every task:
 dart format --set-exit-if-changed .
 flutter analyze
 flutter test
+tool/check_secrets.sh
 firebase emulators:exec --only firestore,functions "npm --prefix functions test"   # from Phase 3
 ```
 
@@ -85,7 +86,7 @@ Other:
 - Install: `flutter pub get`
 - Codegen: `dart run build_runner build --delete-conflicting-outputs`
 - Integration: `flutter test integration_test`
-- Run: `flutter run --dart-define=MAPS_API_KEY=...`
+- Run: `flutter run --dart-define-from-file=env.json` (keys in the git-ignored `env.json`; see README › Setup)
 
 ## Testing
 - Unit tests for every repository, calculation and state machine. Use fakes for `Clock`, `PositionSource` and `Connectivity`, an in-memory Drift database, and recorded fixtures in `test_fixtures/` instead of live API calls.

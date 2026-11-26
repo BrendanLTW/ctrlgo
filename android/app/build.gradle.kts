@@ -1,8 +1,20 @@
+import java.util.Base64
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// Flutter hands --dart-define values to Gradle as comma-separated base64
+// "NAME=value" pairs. Decode them so the manifest can use the Maps key.
+val dartDefines: Map<String, String> =
+    (project.findProperty("dart-defines") as String?)
+        ?.split(",")
+        ?.map { String(Base64.getDecoder().decode(it)).split("=", limit = 2) }
+        ?.filter { it.size == 2 }
+        ?.associate { it[0] to it[1] }
+        ?: emptyMap()
 
 android {
     namespace = "app.ctrlgo"
@@ -27,6 +39,7 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["mapsApiKey"] = dartDefines["MAPS_API_KEY_ANDROID"] ?: ""
     }
 
     buildTypes {

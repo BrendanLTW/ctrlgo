@@ -62,8 +62,9 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Done when: a widget test switches tabs, each tab keeps its scroll position, and the FAB changes per tab.
 - [x] **0.5 Map styles**: `assets/map/light.json` and `dark.json` matching DESIGN.md §2.3; map switches style with the theme.
   Done when: toggling the theme on the demo screen changes the map style.
-- [ ] **0.6 Environment and keys**: `--dart-define` for API keys; keys restricted by package, SHA-1 and web referrer; budget alerts on the Maps project.
+- [x] **0.6 Environment and keys**: `--dart-define` for API keys; keys restricted by package, SHA-1 and web referrer; budget alerts on the Maps project.
   Done when: no key is in git (CI grep check), and the README documents the setup.
+  Note: `tool/check_secrets.sh` is the grep check; 0.8 adds it to CI. Creating the keys, restrictions and budget in Google Cloud is a manual step (README › Setup).
 - [ ] **0.7 Abstractions for testability**: `Clock`, `PositionSource` (real, simulated, recorded), `Connectivity`. The web demo uses `SimulatedPositionSource` replaying a GPX file of the Bangsar South → KLCC drive.
   Done when: a unit test drives a fake position stream through 10 points.
 - [ ] **0.8 CI**: GitHub Actions running format, analyze and test on push; web build deployed to GitHub Pages on main.

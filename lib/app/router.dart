@@ -1,6 +1,7 @@
 import 'package:ctrlgo/app/app_shell.dart';
 import 'package:ctrlgo/core/theme/ct_text.dart';
 import 'package:ctrlgo/features/map/presentation/explore_screen.dart';
+import 'package:ctrlgo/features/search/presentation/search_screen.dart';
 import 'package:ctrlgo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -29,6 +30,8 @@ GoRouter buildRouter({Widget Function(AppTab tab) tabRoot = _tabRoot}) {
             ),
         ],
       ),
+      // Above the shell: Search covers the tabs and nav, as on the canvas.
+      GoRoute(path: searchRoute, builder: (_, _) => const SearchScreen()),
     ],
   );
 }

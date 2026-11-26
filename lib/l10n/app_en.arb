@@ -25,5 +25,18 @@
   "chipWork": "Work",
   "mapLayers": "Show traffic",
   "recentre": "Centre on your location",
-  "yourLocation": "Your location"
+  "yourLocation": "Your location",
+  "cancel": "Cancel",
+  "searchHint": "Search places, addresses",
+  "clearSearch": "Clear search",
+  "suggestions": "Suggestions",
+  "loadingSuggestions": "Loading suggestions",
+  "noPlacesMatch": "No places match that",
+  "suggestionsFailed": "Couldn't load suggestions. Saved places still work.",
+  "tryAgain": "Try again",
+  "placeTypeMall": "Shopping mall",
+  "placeTypePark": "Park",
+  "placeTypeStation": "Station",
+  "placeTypeRestaurant": "Restaurant",
+  "placeTypeCafe": "Café"
 }

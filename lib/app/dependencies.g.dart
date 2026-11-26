@@ -231,3 +231,91 @@ final class LocationPermissionRepositoryProvider
 
 String _$locationPermissionRepositoryHash() =>
     r'41636b45e5fb98d871e7128954785d8e0eb68877';
+
+@ProviderFor(dio)
+final dioProvider = DioProvider._();
+
+final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio>
+    with $Provider<Dio> {
+  DioProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'dioProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$dioHash();
+
+  @$internal
+  @override
+  $ProviderElement<Dio> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Dio create(Ref ref) {
+    return dio(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Dio value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Dio>(value),
+    );
+  }
+}
+
+String _$dioHash() => r'897c48fcc7ac596eb6ceb01a4e25c8406bec13be';
+
+@ProviderFor(placeSearchRepository)
+final placeSearchRepositoryProvider = PlaceSearchRepositoryProvider._();
+
+final class PlaceSearchRepositoryProvider
+    extends
+        $FunctionalProvider<
+          PlaceSearchRepository,
+          PlaceSearchRepository,
+          PlaceSearchRepository
+        >
+    with $Provider<PlaceSearchRepository> {
+  PlaceSearchRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'placeSearchRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$placeSearchRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<PlaceSearchRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  PlaceSearchRepository create(Ref ref) {
+    return placeSearchRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(PlaceSearchRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<PlaceSearchRepository>(value),
+    );
+  }
+}
+
+String _$placeSearchRepositoryHash() =>
+    r'a1d231d6e7681f95234df79bc6ea687548bfdf25';

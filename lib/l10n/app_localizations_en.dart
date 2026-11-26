@@ -89,4 +89,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yourLocation => 'Your location';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get searchHint => 'Search places, addresses';
+
+  @override
+  String get clearSearch => 'Clear search';
+
+  @override
+  String get suggestions => 'Suggestions';
+
+  @override
+  String get loadingSuggestions => 'Loading suggestions';
+
+  @override
+  String get noPlacesMatch => 'No places match that';
+
+  @override
+  String get suggestionsFailed =>
+      'Couldn\'t load suggestions. Saved places still work.';
+
+  @override
+  String get tryAgain => 'Try again';
+
+  @override
+  String get placeTypeMall => 'Shopping mall';
+
+  @override
+  String get placeTypePark => 'Park';
+
+  @override
+  String get placeTypeStation => 'Station';
+
+  @override
+  String get placeTypeRestaurant => 'Restaurant';
+
+  @override
+  String get placeTypeCafe => 'Café';
 }

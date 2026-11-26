@@ -8,8 +8,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 /// [CtIconView] sets the stroke each place needs.
 enum CtIcon {
   add('add'),
+  bag('bag'),
+  close('close'),
+  coffee('coffee'),
   crosshair('crosshair'),
   explore('explore'),
+  food('food'),
   friends('friends'),
   go('go'),
   home('home'),
@@ -22,6 +26,8 @@ enum CtIcon {
   saved('saved'),
   search('search'),
   share('share'),
+  train('train'),
+  tree('tree'),
   work('work');
 
   new(this.file);

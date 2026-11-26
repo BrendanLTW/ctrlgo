@@ -12,6 +12,7 @@ import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
 
 import 'fake_location_permission_repository.dart';
 import 'fake_maps_platform.dart';
+import 'fixtures.dart';
 
 /// The fake installed by `flutter_test_config.dart`.
 FakeMapsPlatform get fakeMaps =>
@@ -24,6 +25,7 @@ Future<FakeLocationPermissionRepository> pumpApp(
   LocationAccess access = LocationAccess.whileUsing,
   Brightness brightness = Brightness.light,
   PositionSource? positions,
+  FixturePlaceSearchRepository? places,
 }) async {
   tester.view
     ..physicalSize = const Size(390, 844)
@@ -41,6 +43,9 @@ Future<FakeLocationPermissionRepository> pumpApp(
         positionSourceProvider.overrideWithValue(
           positions ??
               SimulatedPositionSource.of(const [], clock: const SystemClock()),
+        ),
+        placeSearchRepositoryProvider.overrideWithValue(
+          places ?? FixturePlaceSearchRepository(),
         ),
         // Painting the real puck needs real async; tests check it separately.
         puckIconsProvider.overrideWith(

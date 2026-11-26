@@ -249,6 +249,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your location'**
   String get yourLocation;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search places, addresses'**
+  String get searchHint;
+
+  /// No description provided for @clearSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear search'**
+  String get clearSearch;
+
+  /// No description provided for @suggestions.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions'**
+  String get suggestions;
+
+  /// No description provided for @loadingSuggestions.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading suggestions'**
+  String get loadingSuggestions;
+
+  /// No description provided for @noPlacesMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'No places match that'**
+  String get noPlacesMatch;
+
+  /// No description provided for @suggestionsFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t load suggestions. Saved places still work.'**
+  String get suggestionsFailed;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get tryAgain;
+
+  /// No description provided for @placeTypeMall.
+  ///
+  /// In en, this message translates to:
+  /// **'Shopping mall'**
+  String get placeTypeMall;
+
+  /// No description provided for @placeTypePark.
+  ///
+  /// In en, this message translates to:
+  /// **'Park'**
+  String get placeTypePark;
+
+  /// No description provided for @placeTypeStation.
+  ///
+  /// In en, this message translates to:
+  /// **'Station'**
+  String get placeTypeStation;
+
+  /// No description provided for @placeTypeRestaurant.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant'**
+  String get placeTypeRestaurant;
+
+  /// No description provided for @placeTypeCafe.
+  ///
+  /// In en, this message translates to:
+  /// **'Café'**
+  String get placeTypeCafe;
 }
 
 class _AppLocalizationsDelegate

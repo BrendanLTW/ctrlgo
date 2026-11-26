@@ -58,6 +58,12 @@ abstract final class CtSize {
   static const double chipIcon = 18;
   static const double iconButtonSm = 44;
 
+  /// Search field on the Search screen (canvas `.search`).
+  static const double searchField = 52;
+
+  /// List rows (canvas `.gi`).
+  static const double row = 60;
+
   /// Bottom of the map buttons, leaving room for the commute card and mode
   /// selector above the nav.
   static const double mapButtonsBottom = 268;

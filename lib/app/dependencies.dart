@@ -1,9 +1,13 @@
+import 'package:ctrlgo/app/env.dart';
 import 'package:ctrlgo/core/location/geolocator_permission_repository.dart';
 import 'package:ctrlgo/core/location/geolocator_position_source.dart';
 import 'package:ctrlgo/core/location/location_access.dart';
 import 'package:ctrlgo/core/location/position_source.dart';
 import 'package:ctrlgo/core/network/connectivity.dart';
 import 'package:ctrlgo/core/time/clock.dart';
+import 'package:ctrlgo/features/search/data/google_places_repository.dart';
+import 'package:ctrlgo/features/search/domain/place_search_repository.dart';
+import 'package:dio/dio.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,3 +34,18 @@ SharedPreferences sharedPreferences(Ref ref) =>
 @Riverpod(keepAlive: true)
 LocationPermissionRepository locationPermissionRepository(Ref ref) =>
     GeolocatorPermissionRepository(ref.watch(sharedPreferencesProvider));
+
+@Riverpod(keepAlive: true)
+Dio dio(Ref ref) => Dio(
+  BaseOptions(
+    connectTimeout: const Duration(seconds: 10),
+    receiveTimeout: const Duration(seconds: 10),
+  ),
+);
+
+@Riverpod(keepAlive: true)
+PlaceSearchRepository placeSearchRepository(Ref ref) => GooglePlacesRepository(
+  ref.watch(dioProvider),
+  apiKey: Env.mapsApiKey,
+  appHeaders: Env.mapsAppHeaders,
+);

@@ -31,6 +31,7 @@ ctrlGo uses one key per platform so each can be locked to that platform. In the 
    | `MAPS_API_KEY_IOS` | iOS apps: bundle ID `app.ctrlgo` | Maps SDK for iOS, Places API (New), Routes API |
 
    Get the debug SHA-1 with `cd android && ./gradlew signingReport`.
+   Put the same SHA-1 in `env.json` as `MAPS_ANDROID_CERT_SHA1`: Places and Routes are called over HTTPS, and an Android-restricted key only accepts those calls with the app's package and certificate in the headers.
 3. **Cap spending:** Billing › Budgets & alerts: a monthly budget with alerts at 50%, 90% and 100%. In APIs & Services › each API › Quotas, lower the per-day request limits for Places and Routes to what testing needs.
 
 ### How keys reach each platform

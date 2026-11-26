@@ -1,0 +1,118 @@
+{
+  "suggestions": [
+    {
+      "placePrediction": {
+        "place": "places/fixture-suria-klcc",
+        "placeId": "fixture-suria-klcc",
+        "text": {
+          "text": "Suria KLCC, Jalan Ampang, Kuala Lumpur City Centre, Kuala Lumpur",
+          "matches": [
+            {
+              "startOffset": 6,
+              "endOffset": 10
+            }
+          ]
+        },
+        "structuredFormat": {
+          "mainText": {
+            "text": "Suria KLCC",
+            "matches": [
+              {
+                "startOffset": 6,
+                "endOffset": 10
+              }
+            ]
+          },
+          "secondaryText": {
+            "text": "Jalan Ampang, Kuala Lumpur City Centre, Kuala Lumpur"
+          }
+        },
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "distanceMeters": 6812
+      }
+    },
+    {
+      "placePrediction": {
+        "place": "places/fixture-klcc-park",
+        "placeId": "fixture-klcc-park",
+        "text": {
+          "text": "KLCC Park, Kuala Lumpur City Centre, Kuala Lumpur",
+          "matches": [
+            {
+              "endOffset": 4
+            }
+          ]
+        },
+        "structuredFormat": {
+          "mainText": {
+            "text": "KLCC Park",
+            "matches": [
+              {
+                "endOffset": 4
+              }
+            ]
+          },
+          "secondaryText": {
+            "text": "Kuala Lumpur City Centre, Kuala Lumpur"
+          }
+        },
+        "types": [
+          "park",
+          "point_of_interest",
+          "establishment"
+        ],
+        "distanceMeters": 6904
+      }
+    },
+    {
+      "placePrediction": {
+        "place": "places/fixture-klcc-lrt",
+        "placeId": "fixture-klcc-lrt",
+        "text": {
+          "text": "KLCC LRT Station, Jalan Ampang, Kuala Lumpur",
+          "matches": [
+            {
+              "endOffset": 4
+            }
+          ]
+        },
+        "structuredFormat": {
+          "mainText": {
+            "text": "KLCC LRT Station",
+            "matches": [
+              {
+                "endOffset": 4
+              }
+            ]
+          },
+          "secondaryText": {
+            "text": "Jalan Ampang, Kuala Lumpur"
+          }
+        },
+        "types": [
+          "light_rail_station",
+          "transit_station",
+          "point_of_interest",
+          "establishment"
+        ],
+        "distanceMeters": 6730
+      }
+    },
+    {
+      "queryPrediction": {
+        "text": {
+          "text": "klcc restaurants",
+          "matches": [
+            {
+              "endOffset": 4
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

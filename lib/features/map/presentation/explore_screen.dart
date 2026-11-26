@@ -16,6 +16,7 @@ import 'package:ctrlgo/features/map/presentation/location_access_controller.dart
 import 'package:ctrlgo/features/map/presentation/location_puck.dart';
 import 'package:ctrlgo/features/map/presentation/location_sheet.dart';
 import 'package:ctrlgo/features/map/presentation/map_button.dart';
+import 'package:ctrlgo/features/search/presentation/search_screen.dart';
 import 'package:ctrlgo/l10n/l10n.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -102,9 +103,12 @@ class _ExploreScreenState extends ConsumerState<ExploreScreen> {
                     padding: const EdgeInsets.symmetric(
                       horizontal: CtSpacing.screenX,
                     ),
-                    // shortcut: Search (1.3) and voice search don't exist
-                    // yet; wire both when they land.
-                    child: FloatingSearch(onSearch: () {}, onVoice: () {}),
+                    child: FloatingSearch(
+                      onSearch: () => context.push(searchRoute),
+                      // shortcut: voice search has no task yet; it's a
+                      // no-op until one is planned (DriveLock in 5.4).
+                      onVoice: () {},
+                    ),
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -192,10 +196,10 @@ class _ExploreScreenState extends ConsumerState<ExploreScreen> {
       LocationAccess.denied when !_browseWithoutLocation =>
         LocationSheet.denied(
           onOpenSettings: controller.openSettings,
-          // shortcut: just reveals the map until Search (1.3) exists; then
-          // open Search here.
-          onSearchWithoutLocation: () =>
-              setState(() => _browseWithoutLocation = true),
+          onSearchWithoutLocation: () {
+            setState(() => _browseWithoutLocation = true);
+            unawaited(context.push(searchRoute));
+          },
         ),
       _ => null,
     };

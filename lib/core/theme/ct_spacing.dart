@@ -51,5 +51,15 @@ abstract final class CtSize {
 
   /// List rows inside sheets (`.gi` at 52).
   static const double rowCompact = 52;
+
+  // Explore map overlays, from the canvas `Main` artboard.
+  static const double floatingSearch = 56;
+  static const double chip = 40;
+  static const double chipIcon = 18;
+  static const double iconButtonSm = 44;
+
+  /// Bottom of the map buttons, leaving room for the commute card and mode
+  /// selector above the nav.
+  static const double mapButtonsBottom = 268;
   static const double fabIcon = 28;
 }

@@ -207,6 +207,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Search without location'**
   String get searchWithoutLocation;
+
+  /// No description provided for @whereTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Where to?'**
+  String get whereTo;
+
+  /// No description provided for @voiceSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice search'**
+  String get voiceSearch;
+
+  /// No description provided for @chipHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get chipHome;
+
+  /// No description provided for @chipWork.
+  ///
+  /// In en, this message translates to:
+  /// **'Work'**
+  String get chipWork;
+
+  /// No description provided for @mapLayers.
+  ///
+  /// In en, this message translates to:
+  /// **'Show traffic'**
+  String get mapLayers;
+
+  /// No description provided for @recentre.
+  ///
+  /// In en, this message translates to:
+  /// **'Centre on your location'**
+  String get recentre;
+
+  /// No description provided for @yourLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Your location'**
+  String get yourLocation;
 }
 
 class _AppLocalizationsDelegate

@@ -18,5 +18,12 @@
   "locationSettingsPathIos": "Settings › ctrlGo › Location › ",
   "locationSettingsValueIos": "While Using the App",
   "openSettings": "Open Settings",
-  "searchWithoutLocation": "Search without location"
+  "searchWithoutLocation": "Search without location",
+  "whereTo": "Where to?",
+  "voiceSearch": "Voice search",
+  "chipHome": "Home",
+  "chipWork": "Work",
+  "mapLayers": "Show traffic",
+  "recentre": "Centre on your location",
+  "yourLocation": "Your location"
 }

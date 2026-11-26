@@ -12,11 +12,17 @@ enum CtIcon {
   explore('explore'),
   friends('friends'),
   go('go'),
+  home('home'),
+  layers('layers'),
   location('location'),
   locationOff('location_off'),
+  mic('mic'),
   profile('profile'),
+  recentre('recentre'),
   saved('saved'),
-  share('share');
+  search('search'),
+  share('share'),
+  work('work');
 
   new(this.file);
 

@@ -23,10 +23,19 @@ const _initialCamera = CameraPosition(
   zoom: 14,
 );
 
-/// Google map styled to the current theme. ctrlGo draws its own controls,
-/// so Google's are off.
+/// Google map styled to the current theme. ctrlGo draws its own controls
+/// and puck, so Google's are off.
 class CtMap extends ConsumerWidget {
-  const new({super.key});
+  const new({
+    this.markers = const {},
+    this.trafficEnabled = false,
+    this.onMapCreated,
+    super.key,
+  });
+
+  final Set<Marker> markers;
+  final bool trafficEnabled;
+  final MapCreatedCallback? onMapCreated;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -36,6 +45,9 @@ class CtMap extends ConsumerWidget {
     return GoogleMap(
       initialCameraPosition: _initialCamera,
       style: styles[Theme.of(context).brightness],
+      markers: markers,
+      trafficEnabled: trafficEnabled,
+      onMapCreated: onMapCreated,
       myLocationButtonEnabled: false,
       zoomControlsEnabled: false,
       mapToolbarEnabled: false,

@@ -76,7 +76,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
 
 - [x] **1.1 Location permission flow** (FR-10): explainer → system prompt → states for Always, While using and Denied; the `LocDenied` screen.
   Done when: widget tests cover all three states and "Open Settings" deep-links on Android.
-- [ ] **1.2 Explore map** (FR-01): full-screen map, `LocationPuck` with heading cone, recentre button, layers button, floating search, quick-destination chips.
+- [x] **1.2 Explore map** (FR-01): full-screen map, `LocationPuck` with heading cone, recentre button, layers button, floating search, quick-destination chips.
   Done when: the puck follows the simulated position and recentre animates back to it.
 - [ ] **1.3 Places autocomplete** (FR-02): repository using session tokens and location bias; 250 ms debounce; highlighted matches.
   Done when: unit tests cover debounce and session-token reuse; the `Search` screen widget test shows highlighted results from fixtures.

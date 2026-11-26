@@ -68,4 +68,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchWithoutLocation => 'Search without location';
+
+  @override
+  String get whereTo => 'Where to?';
+
+  @override
+  String get voiceSearch => 'Voice search';
+
+  @override
+  String get chipHome => 'Home';
+
+  @override
+  String get chipWork => 'Work';
+
+  @override
+  String get mapLayers => 'Show traffic';
+
+  @override
+  String get recentre => 'Centre on your location';
+
+  @override
+  String get yourLocation => 'Your location';
 }

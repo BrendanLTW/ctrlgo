@@ -1,5 +1,6 @@
 import 'package:ctrlgo/core/theme/ct_spacing.dart';
 import 'package:ctrlgo/core/widgets/ct_fab.dart';
+import 'package:ctrlgo/core/widgets/ct_icon.dart';
 import 'package:ctrlgo/core/widgets/ct_nav_bar.dart';
 import 'package:ctrlgo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
@@ -75,28 +76,26 @@ class AppShell extends StatelessWidget {
   // ShareSheet (3.4) exist; wire each when its screen lands.
   CtFab _fabFor(AppTab tab, AppLocalizations l10n) => switch (tab) {
     AppTab.explore || AppTab.profile => CtFab(
-      icon: Icons.near_me,
+      icon: CtIcon.go,
       label: l10n.getDirections,
       onPressed: () {},
     ),
     AppTab.friends => CtFab(
-      icon: Icons.ios_share,
+      icon: CtIcon.share,
       label: l10n.shareMyLocation,
       onPressed: () {},
     ),
     AppTab.saved => CtFab(
-      icon: Icons.add,
+      icon: CtIcon.add,
       label: l10n.addSavedPlace,
       onPressed: () {},
     ),
   };
 }
 
-// shortcut: Material icons stand in for the canvas's 1.7 px stroke icons
-// until we bundle SVGs (needs flutter_svg).
-const Map<AppTab, IconData> _navIcons = {
-  AppTab.explore: Icons.explore_outlined,
-  AppTab.friends: Icons.people_outline,
-  AppTab.saved: Icons.bookmark_border,
-  AppTab.profile: Icons.person_outline,
+const Map<AppTab, CtIcon> _navIcons = {
+  AppTab.explore: CtIcon.explore,
+  AppTab.friends: CtIcon.friends,
+  AppTab.saved: CtIcon.saved,
+  AppTab.profile: CtIcon.profile,
 };

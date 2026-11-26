@@ -1,6 +1,7 @@
 import 'package:ctrlgo/core/theme/ct_colors.dart';
 import 'package:ctrlgo/core/theme/ct_shadows.dart';
 import 'package:ctrlgo/core/theme/ct_spacing.dart';
+import 'package:ctrlgo/core/widgets/ct_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Round ink button beside the nav: the current tab's primary action.
@@ -12,7 +13,7 @@ class CtFab extends StatelessWidget {
     super.key,
   });
 
-  final IconData icon;
+  final CtIcon icon;
   final String label;
   final VoidCallback onPressed;
 
@@ -36,7 +37,14 @@ class CtFab extends StatelessWidget {
             onTap: onPressed,
             child: SizedBox.square(
               dimension: CtSize.fab,
-              child: Icon(icon, size: CtSize.fabIcon, color: c.onInk),
+              child: CtIconView(
+                icon,
+                size: CtSize.fabIcon,
+                color: c.onInk,
+                stroke: icon == CtIcon.go
+                    ? CtIconStroke.goArrow
+                    : CtIconStroke.fab,
+              ),
             ),
           ),
         ),

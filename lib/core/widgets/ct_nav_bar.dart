@@ -2,13 +2,14 @@ import 'package:ctrlgo/core/theme/ct_colors.dart';
 import 'package:ctrlgo/core/theme/ct_shadows.dart';
 import 'package:ctrlgo/core/theme/ct_spacing.dart';
 import 'package:ctrlgo/core/theme/ct_text.dart';
+import 'package:ctrlgo/core/widgets/ct_icon.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class CtNavItem {
   const new({required this.icon, required this.label});
 
-  final IconData icon;
+  final CtIcon icon;
   final String label;
 }
 
@@ -90,7 +91,12 @@ class _NavButton extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 spacing: CtSize.navItemGap,
                 children: [
-                  Icon(item.icon, size: CtSize.icon, color: c.ink),
+                  CtIconView(
+                    item.icon,
+                    size: CtSize.icon,
+                    color: c.ink,
+                    stroke: CtIconStroke.nav,
+                  ),
                   if (selected)
                     // shortcut: the 278 px pill only fits the label at 1x;
                     // revisit in the 5.5 accessibility pass.

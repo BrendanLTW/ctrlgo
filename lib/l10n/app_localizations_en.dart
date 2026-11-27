@@ -129,4 +129,32 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get placeTypeCafe => 'Café';
+
+  @override
+  String get recent => 'Recent';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get clearRecents => 'Clear recent searches';
+
+  @override
+  String get searchEmptyBody =>
+      'Check the spelling, use fewer words, or search a nearby landmark or street.';
+
+  @override
+  String get tryLabel => 'Try';
+
+  @override
+  String get dropPin => 'Drop a pin instead';
+
+  @override
+  String get dropPinSub => 'Pick the spot on the map and save it';
+
+  @override
+  String get today => 'today';
+
+  @override
+  String get yesterday => 'yesterday';
 }

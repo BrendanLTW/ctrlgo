@@ -1,13 +1,17 @@
 import 'package:ctrlgo/app/env.dart';
+import 'package:ctrlgo/core/db/app_database.dart';
 import 'package:ctrlgo/core/location/geolocator_permission_repository.dart';
 import 'package:ctrlgo/core/location/geolocator_position_source.dart';
 import 'package:ctrlgo/core/location/location_access.dart';
 import 'package:ctrlgo/core/location/position_source.dart';
 import 'package:ctrlgo/core/network/connectivity.dart';
 import 'package:ctrlgo/core/time/clock.dart';
+import 'package:ctrlgo/features/search/data/drift_recent_search_repository.dart';
 import 'package:ctrlgo/features/search/data/google_places_repository.dart';
 import 'package:ctrlgo/features/search/domain/place_search_repository.dart';
+import 'package:ctrlgo/features/search/domain/recent_search.dart';
 import 'package:dio/dio.dart';
+import 'package:drift_flutter/drift_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -49,3 +53,17 @@ PlaceSearchRepository placeSearchRepository(Ref ref) => GooglePlacesRepository(
   apiKey: Env.mapsApiKey,
   appHeaders: Env.mapsAppHeaders,
 );
+
+@Riverpod(keepAlive: true)
+AppDatabase appDatabase(Ref ref) {
+  final db = AppDatabase(driftDatabase(name: 'ctrlgo'));
+  ref.onDispose(db.close);
+  return db;
+}
+
+@Riverpod(keepAlive: true)
+RecentSearchRepository recentSearchRepository(Ref ref) =>
+    DriftRecentSearchRepository(
+      ref.watch(appDatabaseProvider),
+      ref.watch(clockProvider),
+    );

@@ -327,6 +327,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Café'**
   String get placeTypeCafe;
+
+  /// No description provided for @recent.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get recent;
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// No description provided for @clearRecents.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear recent searches'**
+  String get clearRecents;
+
+  /// No description provided for @searchEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the spelling, use fewer words, or search a nearby landmark or street.'**
+  String get searchEmptyBody;
+
+  /// No description provided for @tryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Try'**
+  String get tryLabel;
+
+  /// No description provided for @dropPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Drop a pin instead'**
+  String get dropPin;
+
+  /// No description provided for @dropPinSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick the spot on the map and save it'**
+  String get dropPinSub;
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'today'**
+  String get today;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'yesterday'**
+  String get yesterday;
 }
 
 class _AppLocalizationsDelegate

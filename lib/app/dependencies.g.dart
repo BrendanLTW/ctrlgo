@@ -319,3 +319,92 @@ final class PlaceSearchRepositoryProvider
 
 String _$placeSearchRepositoryHash() =>
     r'a1d231d6e7681f95234df79bc6ea687548bfdf25';
+
+@ProviderFor(appDatabase)
+final appDatabaseProvider = AppDatabaseProvider._();
+
+final class AppDatabaseProvider
+    extends $FunctionalProvider<AppDatabase, AppDatabase, AppDatabase>
+    with $Provider<AppDatabase> {
+  AppDatabaseProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appDatabaseProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appDatabaseHash();
+
+  @$internal
+  @override
+  $ProviderElement<AppDatabase> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  AppDatabase create(Ref ref) {
+    return appDatabase(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AppDatabase value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AppDatabase>(value),
+    );
+  }
+}
+
+String _$appDatabaseHash() => r'4e7ad915dc00f747ccbe721b8dd2c4e028e33121';
+
+@ProviderFor(recentSearchRepository)
+final recentSearchRepositoryProvider = RecentSearchRepositoryProvider._();
+
+final class RecentSearchRepositoryProvider
+    extends
+        $FunctionalProvider<
+          RecentSearchRepository,
+          RecentSearchRepository,
+          RecentSearchRepository
+        >
+    with $Provider<RecentSearchRepository> {
+  RecentSearchRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'recentSearchRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$recentSearchRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<RecentSearchRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  RecentSearchRepository create(Ref ref) {
+    return recentSearchRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(RecentSearchRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<RecentSearchRepository>(value),
+    );
+  }
+}
+
+String _$recentSearchRepositoryHash() =>
+    r'992b5a12e733cc3877efaac0d7be7e85f88c2350';

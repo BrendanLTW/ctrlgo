@@ -9,6 +9,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 enum CtIcon {
   add('add'),
   bag('bag'),
+  chevronRight('chevron_right'),
+  clock('clock'),
   close('close'),
   coffee('coffee'),
   crosshair('crosshair'),
@@ -21,10 +23,12 @@ enum CtIcon {
   location('location'),
   locationOff('location_off'),
   mic('mic'),
+  pinAdd('pin_add'),
   profile('profile'),
   recentre('recentre'),
   saved('saved'),
   search('search'),
+  searchOff('search_off'),
   share('share'),
   train('train'),
   tree('tree'),
@@ -48,6 +52,9 @@ abstract final class CtIconStroke {
   static const double tile = 1.9;
   static const double button = 1.8;
   static const double fab = 2.2;
+
+  /// Row chevrons (canvas `.chev`).
+  static const double chevron = 2;
 
   /// Outline on the filled Go arrow.
   static const double goArrow = 1.6;

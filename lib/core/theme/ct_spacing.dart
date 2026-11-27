@@ -64,6 +64,9 @@ abstract final class CtSize {
   /// List rows (canvas `.gi`).
   static const double row = 60;
 
+  /// Recent search rows (`.gi` at 56).
+  static const double rowRecent = 56;
+
   /// Bottom of the map buttons, leaving room for the commute card and mode
   /// selector above the nav.
   static const double mapButtonsBottom = 268;

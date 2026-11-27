@@ -80,7 +80,7 @@ test/ · integration_test/ · test_fixtures/ (recorded API responses)
   Done when: the puck follows the simulated position and recentre animates back to it.
 - [x] **1.3 Places autocomplete** (FR-02): repository using session tokens and location bias; 250 ms debounce; highlighted matches.
   Done when: unit tests cover debounce and session-token reuse; the `Search` screen widget test shows highlighted results from fixtures.
-- [ ] **1.4 Recents and search empty state**: Drift table capped at 50; Clear; the `SearchEmpty` screen with suggestions and "Drop a pin".
+- [x] **1.4 Recents and search empty state**: Drift table capped at 50; Clear; the `SearchEmpty` screen with suggestions and "Drop a pin".
   Done when: a repository test proves the cap and the order.
 - [ ] **1.5 Saved places** (FR-05): Drift tables; Home and Work cards with live travel time; favourites list; Edit mode with delete and Undo; `PlaceEdit` with name, kind, colour and map preview.
   Done when: tests cover the single-Home rule, delete with Undo restoring the same id, and travel time refreshing on resume.

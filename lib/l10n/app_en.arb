@@ -38,5 +38,14 @@
   "placeTypePark": "Park",
   "placeTypeStation": "Station",
   "placeTypeRestaurant": "Restaurant",
-  "placeTypeCafe": "Café"
+  "placeTypeCafe": "Café",
+  "recent": "Recent",
+  "clear": "Clear",
+  "clearRecents": "Clear recent searches",
+  "searchEmptyBody": "Check the spelling, use fewer words, or search a nearby landmark or street.",
+  "tryLabel": "Try",
+  "dropPin": "Drop a pin instead",
+  "dropPinSub": "Pick the spot on the map and save it",
+  "today": "today",
+  "yesterday": "yesterday"
 }

@@ -12,6 +12,7 @@ import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
 
 import 'fake_location_permission_repository.dart';
 import 'fake_maps_platform.dart';
+import 'fake_recent_search_repository.dart';
 import 'fixtures.dart';
 
 /// The fake installed by `flutter_test_config.dart`.
@@ -26,6 +27,8 @@ Future<FakeLocationPermissionRepository> pumpApp(
   Brightness brightness = Brightness.light,
   PositionSource? positions,
   FixturePlaceSearchRepository? places,
+  FakeRecentSearchRepository? recents,
+  Clock? clock,
 }) async {
   tester.view
     ..physicalSize = const Size(390, 844)
@@ -44,6 +47,10 @@ Future<FakeLocationPermissionRepository> pumpApp(
           positions ??
               SimulatedPositionSource.of(const [], clock: const SystemClock()),
         ),
+        recentSearchRepositoryProvider.overrideWithValue(
+          recents ?? FakeRecentSearchRepository(),
+        ),
+        if (clock != null) clockProvider.overrideWithValue(clock),
         placeSearchRepositoryProvider.overrideWithValue(
           places ?? FixturePlaceSearchRepository(),
         ),

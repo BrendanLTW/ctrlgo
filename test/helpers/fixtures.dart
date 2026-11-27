@@ -19,6 +19,9 @@ class FixturePlaceSearchRepository implements PlaceSearchRepository {
   /// Set to make the next calls throw, as a dropped connection would.
   Exception? failWith;
 
+  /// Queries that find nothing.
+  final Set<String> noMatches = {};
+
   @override
   Future<List<PlaceSuggestion>> autocomplete(
     String input, {
@@ -27,6 +30,7 @@ class FixturePlaceSearchRepository implements PlaceSearchRepository {
   }) async {
     calls.add((input: input, sessionToken: sessionToken));
     if (failWith case final e?) throw e;
+    if (noMatches.contains(input)) return const [];
     return parseAutocomplete(fixtureJson('places/autocomplete_klcc.json'));
   }
 }
